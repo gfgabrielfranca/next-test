@@ -1,3 +1,5 @@
+import { GetServerSidePropsContext } from "next";
+
 export default function Home({ time, host }) {
   return (
     <div>
@@ -7,8 +9,10 @@ export default function Home({ time, host }) {
   )
 }
 
-// export async function getServerSideProps() {
-//   console.log('server: Home');
+export async function getServerSideProps() {
+  console.log('server: Home');
+  
+  const props = { time: (new Date()).toString() };
 
-//   return {}
-// }
+  return { props };
+}
