@@ -7,9 +7,8 @@ export default function Home({ time, host }) {
   )
 }
 
-export async function getServerSideProps({ req, res }) {
-  return { props: {
-    time: (new Date()).toString(),
-    host: req.headers.host
-  }}
-}
+// export async function getServerSideProps() {
+//   console.log('server: Home');
+
+//   return {}
+// }
