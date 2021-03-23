@@ -9,7 +9,7 @@ MyApp.getInitialProps = async (appContext: AppContext) => {
   
   appContext.ctx.res.setHeader(
     'Cache-Control',
-    'public, s-maxage=60, stale-while-revalidate=60'
+    'public, s-maxage=10, stale-while-revalidate=60'
   );
 
   const appProps = await App.getInitialProps(appContext);
