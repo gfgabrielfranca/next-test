@@ -1,7 +1,19 @@
 import App, { AppProps, AppContext } from 'next/app'
+import { DefaultTheme, ThemeProvider } from 'styled-components'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import { GlobalStyle } from '../styles'
+
+interface MyAppProps extends AppProps {
+  theme: DefaultTheme;
+}
+
+function MyApp({ Component, pageProps, theme }: MyAppProps) {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
 MyApp.getInitialProps = async (appContext: AppContext) => {
@@ -18,8 +30,13 @@ MyApp.getInitialProps = async (appContext: AppContext) => {
     ...appProps.pageProps,
     host: appContext.ctx.req.headers.host
   };
+
+  const theme = {
+    background: '#2c3e50',
+    color: "#FFFFFF"
+  }
   
-  return { pageProps };
+  return { pageProps, theme };
 }
 
 export default MyApp
