@@ -8,9 +8,16 @@ export default function Home({ time, host }) {
       <p>{time}</p>
       <p>{host}</p>
 
-      <Link href="/about">
-        <a>About</a>
-      </Link>
+      <ul>
+        <li>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </li>
+        <li>
+          <a href="/about">About (a)</a>
+        </li>
+      </ul>
     </>
   )
 }

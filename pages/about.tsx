@@ -8,9 +8,16 @@ export default function About({ time, host }) {
       <p>{time}</p>
       <p>{host}</p>
 
-      <Link href="/">
-        <a>Home</a>
-      </Link>
+      <ul>
+        <li>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </li>
+        <li>
+          <a href="/">Home (a)</a>
+        </li>
+      </ul>
     </>
   )
 }
