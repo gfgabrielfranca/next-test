@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Home({ time, host }) {
+export default function About({ time, host }) {
   return (
     <>
       <h1>About</h1>
