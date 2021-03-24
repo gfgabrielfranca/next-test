@@ -31,10 +31,8 @@ MyApp.getInitialProps = async (appContext: AppContext) => {
     host: appContext.ctx.req.headers.host
   };
 
-  const theme = {
-    background: '#2c3e50',
-    color: "#FFFFFF"
-  }
+  const response = await fetch("https://raw.githubusercontent.com/gfgabrielfranca/theme/main/db.json");
+  const theme = await response.json();
   
   return { pageProps, theme };
 }
