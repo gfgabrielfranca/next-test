@@ -15,15 +15,9 @@ export default function About({ time, host }) {
           </Link>
         </li>
         <li>
-          <a href="/">Home (a)</a>
-        </li>
-        <li>
           <Link href="/profile">
             <a>Profile</a>
           </Link>
-        </li>
-        <li>
-          <a href="/">Profile (a)</a>
         </li>
       </ul>
     </>

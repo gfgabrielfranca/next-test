@@ -14,9 +14,6 @@ export default function Profile({ time, host }) {
             <a>About</a>
           </Link>
         </li>
-        <li>
-          <a href="/about">About (a)</a>
-        </li>
       </ul>
     </>
   )
