@@ -1,4 +1,5 @@
-import { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle, css } from 'styled-components';
+import NextNprogress from 'nextjs-progressbar';
 
 export const GlobalStyle = createGlobalStyle`
   ${({ theme }) => css`
@@ -13,3 +14,10 @@ export const GlobalStyle = createGlobalStyle`
   `}
   
 `
+
+export const ProgressBar = styled(NextNprogress).attrs(({theme}) => ({
+  color: theme.color,
+  startPosition: 0.3,
+  stopDelayMs: 200,
+  height: "2"
+}))``

@@ -1,7 +1,7 @@
 import App, { AppProps, AppContext } from 'next/app'
 import { DefaultTheme, ThemeProvider } from 'styled-components'
 
-import { GlobalStyle } from '../styles'
+import { GlobalStyle, ProgressBar } from '../styles'
 
 interface MyAppProps extends AppProps {
   theme: DefaultTheme;
@@ -10,6 +10,7 @@ interface MyAppProps extends AppProps {
 function MyApp({ Component, pageProps, theme }: MyAppProps) {
   return (
     <ThemeProvider theme={theme}>
+      <ProgressBar />
       <GlobalStyle />
       <Component {...pageProps} />
     </ThemeProvider>
