@@ -31,7 +31,7 @@ MyApp.getInitialProps = async (appContext: AppContext) => {
     host: appContext.ctx.req.headers.host
   };
 
-  const response = await fetch("https://raw.githubusercontent.com/gfgabrielfranca/theme/main/db.json");
+  const response = await fetch("https://theme-gfgabrielfranca.vercel.app/");
   const theme = await response.json();
   
   return { pageProps, theme };
